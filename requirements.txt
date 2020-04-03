@@ -9,5 +9,5 @@ MarkupSafe==1.1.1
 Werkzeug==0.16.0
 gunicorn==20.0.4
 requests==2.23.0
-request-futures==1.0.0
+requests-futures==1.0.0
 requests-toolbelt==0.9.1
