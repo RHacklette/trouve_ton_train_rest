@@ -22,7 +22,18 @@ class CalculPrix(Resource):
         
         prix = float(args['distance']) * 0.25
         
-        return {'prix' : prix}
+        if args['devise'] == "euro" :
+            prixtrain = prix * 1
+        elif args['devise'] == "gbp" :
+            prixtrain = prix * 0.8827;
+        elif args['devise'] == "aud" :
+            prixtrain = prix * 1.7592;
+        elif args['devise'] == "usd" :
+            prixtrain = prix * 1.0916;
+        else:
+            prixtrain = prix * 1;
+                
+        return {'prix' : prixtrain}
 
 api.add_resource(CalculPrix, '/CalculPrix')
     
